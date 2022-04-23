@@ -47,3 +47,36 @@ body {
 .sidenav-toggled #main {
     margin-left: 250px;
 }
+
+div.box {
+    margin-top: 5px;
+    width: 200px;
+    height: 100px;
+}
+
+div.box.bigbox {
+    width: 300px;
+    height: 200px;
+}
+
+div.box.left {
+    background-color: aqua;
+    float: left;
+    clear: left;
+}
+
+div.box.right {
+    background-color: red;
+    margin-left: 305px;
+}
+
+.wrapper-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+}
+
+.wrapper-content li.bigBox {
+    grid-column: span 2;
+}
