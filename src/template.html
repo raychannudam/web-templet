@@ -16,64 +16,75 @@
 <body>
     <!-- Not really viewport, but it's the entire page -->
     <div class="viewport">
-        <!-- Left navigation bar -->
-        <div class="left-nav" id="sidenav">
-            <a href="forms" class="active-page">Forms</a>
-            <a href="tables">Tables</a>
-            <a href="carousel">Carousel</a>
-            <a href="sample">Sample Page</a>
+        <div id="failure-to-load-due-to-too-small-width" class="hidden">
+            <div class="failure-to-load-due-to-too-small-width__text">
+                <h1 class="m-5">
+                    Sorry, this page is not available on mobile devices. (Width too small.)
+                </h1>
+                <p class="m-5">
+                    Please use a computer or a larger screen to view this page, or you could try to rotate the device.
+                </p>
+            </div>
         </div>
-        <!-- End of left navigation bar -->
+        <div class="viewport-inner-wrap">
+            <!-- Left navigation bar -->
+            <div class="left-nav" id="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="forms" class="active-page">Forms</a>
+                <a href="tables">Tables</a>
+                <a href="carousel">Carousel</a>
+                <a href="sample">Sample Page</a>
+            </div>
+            <!-- End of left navigation bar -->
 
-        <!-- Right block of content -->
-        <div class="right-content" id="main">
-            <!-- Top navigation bar -->
-            <div class="top-nav">
-                <div class="inner-top-nav">
-                    <!-- Clickable buttons (a) -->
-                    <div class="buttons m-5 flex justify-between">
-                        <!-- Left side buttons -->
-                        <div class="buttons-left-side space-x-5 text-xl">
-                            <span onclick="toggleSidebar()">
-                                <i class="fa fa-bars" style="font-size: 25px;"></i>
-                            </span>
-                            <a href="index.html">Home</a>
-                            <a href="#">About</a>
-                            <a href="#">Contact Us</a>
-                        </div>
-                        <!-- End of left side buttons -->
+            <!-- Right block of content -->
+            <div class="right-content" id="main">
+                <!-- Top navigation bar -->
+                <div class="top-nav">
+                    <div class="inner-top-nav">
+                        <!-- Clickable buttons (a) -->
+                        <div class="buttons m-5 flex justify-between">
+                            <!-- Left side buttons -->
+                            <div class="buttons-left-side space-x-5 text-xl">
+                                <span onclick="toggleSidebar()">
+                                    <i class="fa fa-bars" style="font-size: 25px;"></i>
+                                </span>
+                                <a href="index.html">Home</a>
+                                <a href="#">About</a>
+                                <a href="#">Contact Us</a>
+                            </div>
+                            <!-- End of left side buttons -->
 
-                        <!-- Right side buttons -->
-                        <div class="buttons-right-side space-x-8">
-                            <a href="#">
-                                <i class="fa fa-user-circle-o" style="font-size: 25px;"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa fa-bell" style="font-size: 25px;"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa fa-envelope" style="font-size: 25px;"></i>
-                            </a>
+                            <!-- Right side buttons -->
+                            <div class="buttons-right-side space-x-8">
+                                <a href="#">
+                                    <i class="fa fa-user-circle-o" style="font-size: 25px;"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-bell" style="font-size: 25px;"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-envelope" style="font-size: 25px;"></i>
+                                </a>
+                            </div>
+                            <!-- End of right side buttons -->
                         </div>
-                        <!-- End of right side buttons -->
+                        <!-- End of clickable buttons -->
                     </div>
-                    <!-- End of clickable buttons -->
                 </div>
-            </div>
-            <!-- End of top navigation bar -->
+                <!-- End of top navigation bar -->
 
-            <!-- Main content -->
-            <div class="content">
-                <div class="inner-content flex m-5 p-5 overflow-auto w-50">
-                    <ul class="wrapper-content">
-                        <!-- Insert templates here -->
-                    </ul>
+                <!-- Main content -->
+                <div class="content">
+                    <div class="inner-content flex m-5 p-5 overflow-auto w-50">
+                        
+                    </div>
                 </div>
+                <!-- End of main content -->
             </div>
-            <!-- End of main content -->
         </div>
+        <!-- End of viewport -->
     </div>
-    <!-- End of viewport -->
     
     <!-- load Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
