@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/forms.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Admin Template thing</title>
+</head>
+<body>
+    <!-- Not really viewport, but it's the entire page -->
+    <div class="viewport">
+        <div id="failure-to-load-due-to-too-small-width" class="hidden">
+            <div class="failure-to-load-due-to-too-small-width__text">
+                <h1 class="m-5">
+                    Sorry, this page is not available on mobile devices. (Width too small.)
+                </h1>
+                <p class="m-5">
+                    Please use a computer or a larger screen to view this page, or you could try to rotate the device.
+                </p>
+            </div>
+        </div>
+        <div class="viewport-inner-wrap">
+            <!-- Left navigation bar -->
+            <div class="left-nav" id="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="forms" class="active-page">Forms</a>
+                <a href="tables">Tables</a>
+                <a href="carousel">Carousel</a>
+                <a href="sample">Sample Page</a>
+            </div>
+            <!-- End of left navigation bar -->
+
+            <!-- Right block of content -->
+            <div class="right-content" id="main">
+                <!-- Top navigation bar -->
+                <div class="top-nav">
+                    <div class="inner-top-nav">
+                        <!-- Clickable buttons (a) -->
+                        <div class="buttons m-5 flex justify-between">
+                            <!-- Left side buttons -->
+                            <div class="buttons-left-side space-x-5 text-xl">
+                                <span onclick="toggleSidebar()">
+                                    <i class="fa fa-bars" style="font-size: 25px;"></i>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-globe"></i>
+                                    <a href="#">WD-T4</a>
+                                </span>
+                                <a href="index.html">Home</a>
+                                <a href="#">About</a>
+                                <a href="#">Contact Us</a>
+                            </div>
+                            <!-- End of left side buttons -->
+
+                            <!-- Right side buttons -->
+                            <div class="buttons-right-side space-x-8">
+                                <a href="#">
+                                    <i class="fa fa-user-circle-o" style="font-size: 25px;"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-bell" style="font-size: 25px;"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-envelope" style="font-size: 25px;"></i>
+                                </a>
+                            </div>
+                            <!-- End of right side buttons -->
+                        </div>
+                        <!-- End of clickable buttons -->
+                    </div>
+                </div>
+                <!-- End of top navigation bar -->
+
+                <!-- Main content -->
+                <div class="content">
+                    <div class="inner-content flex m-5 p-5 overflow-auto w-50">
+                        <ul class="wrapper-content">
+                            <li>
+                                <!-- form template number 1 -->
+                                <div class="form-template-1 border-2 border-emerald-200 rounded-xl bg-cyan-100">
+                                    <div class="form-template-1-header  border-red-500 p-2 text-center rounded-xl bg-cyan-100">
+                                        <h1>Super quick example</h1>
+                                    </div>
+                                    <div class="form-template-1-body bg-blue-100 rounded-xl">
+                                        <div class="inner-form-template-1-body  border-green-500 pt-7 rounded-xl">
+                                            <table class="w-full table-fixed text-center leading-10">
+                                                <tr class="border-b-8 border-b-transparent">
+                                                    <td>
+                                                        <label for="first-name1"><strong>First Name</strong></label>
+                                                    </td>
+                                                    <td>
+                                                        <input class="rounded-2xl px-3" type="text" name="first-name1" id="first-name1" placeholder="#first-name1">
+                                                    </td>
+                                                </tr>
+                                                <tr class="border-b-8 border-b-transparent">
+                                                    <td>
+                                                        <label for="last-name1"><strong>Last Name</strong></label>
+                                                    </td>
+                                                    <td>
+                                                        <input class="rounded-2xl px-3" type="text" name="last-name1" id="last-name1" placeholder="#last-name1">
+                                                    </td>
+                                                </tr>
+                                                <tr class="border-b-8 border-b-transparent">
+                                                    <td>
+                                                        <label for="email1"><strong>Email</strong></label>
+                                                    </td>
+                                                    <td>
+                                                        <input class="rounded-2xl px-3" type="email" name="email1" id="email1" placeholder="#email1">
+                                                    </td>
+                                                </tr>
+                                                <tr class="border-b-8 border-b-transparent">
+                                                    <td>
+                                                        <label for="phone1"><strong>Phone</strong></label>
+                                                    </td>
+                                                    <td>
+                                                        <input class="rounded-2xl px-3" type="text" name="phone1" id="phone1" placeholder="#phone1">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <button class="submit1 m-6 text-xl border-2 border-emerald-300 rounded-xl bg-gradient-to-tr px-5 py-2 from-emerald-200 via-cyan-300 to-purple-200" onclick="responseSubmit1()">Submit</button>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- End of form template number 1 -->
+
+                            <!-- form template number 2 -->
+                            <li>
+                                <div class="form-template-2 border-2 border-blue-200 rounded-xl bg-emerald-300 text-center">
+                                    <div class="form-template-2-header p-2 rounded-xl">
+                                        <h1>Some general elements</h1>
+                                    </div>
+                                    <div class="form-template-2-body rounded-xl bg-cyan-100">
+                                        <div class="inner-form-template-2-body p-5">
+                                            <table class="w-full">
+                                                <tr class="form-template-2-row-1">
+                                                    <td>
+                                                        <div class="form-card">
+                                                            <div class="form-card-header">
+                                                                <h1><strong>Text Field</strong></h1>
+                                                            </div>
+                                                            <div class="form-card-body flex shrink">
+                                                                <input class="rounded-2xl px-3 w-full p-2 m-2" type="text" name="text-field-normal" id="text-field-normal" placeholder="#text-field-normal">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="form-card">
+                                                            <div class="form-card-header">
+                                                                <h1><strong>Text Field (Disabled)</strong></h1>
+                                                            </div>
+                                                            <div class="form-card-body flex shrink">
+                                                                <input class="rounded-2xl px-3 w-full p-2 m-2" type="text" name="text-field-disabled" id="text-field-disabled" placeholder="#text-field-disabled" disabled>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="form-template-2-row-2">
+                                                    <td>
+                                                        <div class="form-card">
+                                                            <div class="form-card-header">
+                                                                <h1><strong>Text Area</strong></h1>
+                                                            </div>
+                                                            <div class="form-card-body flex shrink">
+                                                                <textarea class="rounded-2xl px-3 w-full p-2 m-2" name="text-area" id="text-area" placeholder="#text-area"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="form-card">
+                                                            <div class="form-card-header">
+                                                                <h1><strong>Text Area (Disabled)</strong></h1>
+                                                            </div>
+                                                            <div class="form-card-body flex shrink">
+                                                                <textarea class="rounded-2xl px-3 w-full p-2 m-2" name="text-area-disabled" id="text-area-disabled" placeholder="#text-area-disabled" disabled></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="form-template-2-row-3">
+                                                    <td colspan="2">
+                                                        <div class="form-card">
+                                                            <div class="form-card-header">
+                                                                <h1><strong>&#x2713; Input with success</strong></h1>
+                                                            </div>
+                                                            <div class="form-card-body flex shrink">
+                                                                <input class="rounded-2xl px-3 w-full p-2 m-2 focus:outline-none border-2 border-green-500" type="text" name="input-success" id="input-success" placeholder="#input-success">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="form-template-2-row-4">
+                                                    <td colspan="2">
+                                                        <div class="form-card">
+                                                            <div class="form-card-header">
+                                                                <h1><strong>&#x2717; Input with error</strong></h1>
+                                                            </div>
+                                                            <div class="form-card-body flex shrink">
+                                                                <input class="rounded-2xl px-3 w-full p-2 m-2 focus:outline-none border-2 border-red-600" type="text" name="input-error" id="input-error" placeholder="#input-error">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="form-template-2-row-5">
+                                                    <td colspan="2">
+                                                        <div class="form-card">
+                                                            <div class="form-card-header">
+                                                                <h1><strong>&#x2757; Input with warning</strong></h1>
+                                                            </div>
+                                                            <div class="form-card-body flex shrink">
+                                                                <input class="rounded-2xl px-3 w-full p-2 m-2 focus:outline-none border-2 border-yellow-400" type="text" name="input-warning" id="input-warning" placeholder="#input-warning">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="form-template-2-row-6">
+                                                    <td>
+                                                        <!-- checkboxes -->
+                                                        <div class="form-card">
+                                                            <div class="form-card-header">
+                                                                <h1><strong>Checkboxes</strong></h1>
+                                                            </div>
+
+                                                            <div class="form-card-body flex shrink">
+                                                                <div class="form-checkbox-group w-full p-2 m-2 text-left">
+                                                                    <!-- normal checkbox -->
+                                                                    <div class="form-checkbox-item">
+                                                                        <input class="form-checkbox" type="checkbox" name="checkbox" id="checkbox-1" value="checkbox-1">
+                                                                        <label for="checkbox-1">Checkbox</label>
+                                                                    </div>
+                                                                    
+                                                                    <!-- selected checkbox -->
+                                                                    <div class="form-checkbox-item">
+                                                                        <input class="form-checkbox" type="checkbox" name="checkbox" id="checkbox-2" value="checkbox-2" checked>
+                                                                        <label for="checkbox-2">Checkbox Selected</label>
+                                                                    </div>
+
+                                                                    <!-- disabled checkbox -->
+                                                                    <div class="form-checkbox-item">
+                                                                        <input class="form-checkbox" type="checkbox" name="checkbox" id="checkbox-3" value="checkbox-3" disabled>
+                                                                        <label for="checkbox-3">Checkbox Disabled</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <!-- radio buttons -->
+                                                        <div class="form-card">
+                                                            <div class="form-card-header">
+                                                                <h1><strong>Radio buttons</strong></h1>
+                                                            </div>
+
+                                                            <div class="form-card-body flex shrink">
+                                                                <div class="form-radio-group w-full p-2 m-2 text-left">
+                                                                    <!-- normal radio button -->
+                                                                    <div class="form-radio-item">
+                                                                        <input class="form-radio" type="radio" name="radio" id="radio-1" value="radio-1">
+                                                                        <label for="radio-1">Radio Button</label>
+                                                                    </div>
+                                                                    
+                                                                    <!-- selected radio button -->
+                                                                    <div class="form-radio-item">
+                                                                        <input class="form-radio" type="radio" name="radio" id="radio-2" value="radio-2" checked>
+                                                                        <label for="radio-2">Radio Button Selected</label>
+                                                                    </div>
+
+                                                                    <!-- disabled radio button -->
+                                                                    <div class="form-radio-item">
+                                                                        <input class="form-radio" type="radio" name="radio" id="radio-3" value="radio-3" disabled>
+                                                                        <label for="radio-3">Radio 3</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="form-template-2-row-7">
+                                                    <td>
+                                                        <!-- dropdown -->
+                                                        <div class="form-card">
+                                                            <div class="form-card-header">
+                                                                <h1><strong>Dropdown</strong></h1>
+                                                            </div>
+
+                                                            <div class="form-card-body flex shrink">
+                                                                <div class="form-dropdown w-full p-2 m-2">
+                                                                    <select class="form-dropdown-select w-full p-2 m-2" name="dropdown" id="dropdown">
+                                                                        <option value="">Select an option</option>
+                                                                        <option value="1">Option 1</option>
+                                                                        <option value="2">Option 2</option>
+                                                                        <option value="3">Option 3</option>
+                                                                        <option value="4">Option 4</option>
+                                                                        <option value="5">Option 5</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <!-- dropdown disabled -->
+                                                        <div class="form-card">
+                                                            <div class="form-card-header">
+                                                                <h1><strong>Dropdown</strong></h1>
+                                                            </div>
+
+                                                            <div class="form-card-body flex shrink">
+                                                                <div class="form-dropdown w-full p-2 m-2">
+                                                                    <select class="form-dropdown-select w-full p-2 m-2" name="dropdown" id="dropdown-2" disabled>
+                                                                        <option value="">Select an option</option>
+                                                                        <option value="1">Option 1</option>
+                                                                        <option value="2">Option 2</option>
+                                                                        <option value="3">Option 3</option>
+                                                                        <option value="4">Option 4</option>
+                                                                        <option value="5">Option 5</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="form-template-2-row-8">
+                                                    <!-- multiselect options -->
+                                                    <td>
+                                                        <div class="form-card">
+                                                            <div class="form-card-header">
+                                                                <h1><strong>Multiselect options</strong></h1>
+                                                            </div>
+
+                                                            <div class="form-card-body flex shrink">
+                                                                <div class="form-multiselect w-full p-2 m-2">
+                                                                    <select class="form-multiselect-select w-full p-2 m-2" name="multiselect" id="multiselect" multiple>
+                                                                        <option value="">Select an option</option>
+                                                                        <option value="1">Option 1</option>
+                                                                        <option value="2">Option 2</option>
+                                                                        <option value="3">Option 3</option>
+                                                                        <option value="4">Option 4</option>
+                                                                        <option value="5">Option 5</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <!-- multiselect options disabled -->
+                                                    <td>
+                                                        <div class="form-card">
+                                                            <div class="form-card-header">
+                                                                <h1><strong>Multiselect options</strong></h1>
+                                                            </div>
+
+                                                            <div class="form-card-body flex shrink">
+                                                                <div class="form-multiselect w-full p-2 m-2">
+                                                                    <select class="form-multiselect-select w-full p-2 m-2" name="multiselect" id="multiselect-2" multiple disabled>
+                                                                        <option value="">Select an option</option>
+                                                                        <option value="1">Option 1</option>
+                                                                        <option value="2">Option 2</option>
+                                                                        <option value="3">Option 3</option>
+                                                                        <option value="4">Option 4</option>
+                                                                        <option value="5">Option 5</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End of main content -->
+            </div>
+        </div>
+        <!-- End of viewport -->
+    </div>
+    
+    <!-- load Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../resources/js/common.js"></script>
+    <script src="../resources/js/forms.js"></script>
+
+</body>
+</html>
