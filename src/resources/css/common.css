@@ -103,12 +103,20 @@ div.box.right {
 }
 
 .wrapper-content {
+    --n: 3;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(max(450px, 100%/var(--n)), 1fr));
     grid-gap: 10px;
     grid-auto-flow: dense;
+    
 }
 
 .wrapper-content li.bigBox {
     grid-column: span 2;
+}
+
+#sidenav a.active-page {
+    background-color: #4CAF50;
+    color: white;
+    border-bottom: 3px solid white;
 }

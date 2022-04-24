@@ -1,0 +1,8 @@
+.carousel-cell {
+    width: 66%;
+    margin-right: 10px;
+}
+
+.carousel-cell::before {
+    display: block;
+}
