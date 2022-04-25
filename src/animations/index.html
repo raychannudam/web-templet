@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -30,11 +31,11 @@
             <!-- Left navigation bar -->
             <div class="left-nav" id="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="../forms" class="active-page">Forms</a>
+                <a href="../forms">Forms</a>
                 <a href="../tables">Tables</a>
                 <a href="../carousel">Carousel</a>
                 <a href="../buttons">Buttons</a>
-                <a href="../animations">Animations</a>
+                <a href="../animations" class="active-page">Animations</a>
                 <a href="../sample">Sample Page</a>
             </div>
             <!-- End of left navigation bar -->
@@ -83,7 +84,76 @@
                 <!-- Main content -->
                 <div class="content">
                     <div class="inner-content flex m-5 p-5 overflow-auto w-50">
-                        
+                        <ul class="wrapper-content">
+                            <li>
+                                <div class="card">
+                                    <div class="card-header w-full text-center p-2">
+                                        <h1><strong>Simple Animations</strong></h1>
+                                    </div>
+                                    <div class="card-body w-full text-center">
+                                        <table class="w-full h-full">
+                                            <tr>
+                                                <th>
+                                                    <h1><strong>Simple Color Wheel</strong></h1>
+                                                </th>
+                                                <th>
+                                                    <h1><strong>Simple Color Wheel + Spin</strong></h1>
+                                                </th>
+                                                <th>
+                                                    <h1><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Simple Color Wheel + Move&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></h1>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="container w-full h-full flex justify-center content-center border border-green-500">
+                                                        <div class="square color-wheel"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="container w-full h-full flex justify-center content-center border border-blue-500">
+                                                        <div class="square-small color-wheel-spin self-center"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="container w-full h-full flex justify-center content-center border border-emerald-500">
+                                                        <div class="square color-wheel-move"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>
+                                                    <h1><strong>Simple shifting gradient</strong></h1>
+                                                </th>
+                                                <th>
+                                                    <h1><strong>Simple Grow on Hover</strong></h1>
+                                                </th>
+                                                <th>
+                                                    <h1><strong>Simple Shrink on Hover</strong></h1>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="container w-full h-full flex justify-center content-center border border-yellow-400">
+                                                        <div class="square gradient-shift"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="container w-full h-full flex justify-center content-center border">
+                                                        <div class="square grow bg-red-500 text-red-500"> why is this not a square</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="container w-full h-full flex justify-center content-center border">
+                                                        <div class="square shrink bg-red-500"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <!-- End of main content -->
@@ -124,7 +194,7 @@
     <!-- load Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../resources/js/common.js"></script>
-    <script src="../resources/js/forms.js"></script>
+    <script src="../resources/js/animations.js"></script>
 
 </body>
 </html>
