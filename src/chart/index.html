@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Admin Template thing</title>
+</head>
+<body>
+    <!-- Not really viewport, but it's the entire page -->
+    <div class="viewport">
+        <div id="failure-to-load-due-to-too-small-width" class="hidden">
+            <div class="failure-to-load-due-to-too-small-width__text">
+                <h1 class="m-5">
+                    Sorry, this page is not available on mobile devices. (Width too small.)
+                </h1>
+                <p class="m-5">
+                    Please use a computer or a larger screen to view this page, or you could try to rotate the device.
+                </p>
+            </div>
+        </div>
+        <div class="viewport-inner-wrap">
+            <!-- Left navigation bar -->
+            <div class="left-nav" id="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="../forms">Forms</a>
+                <a href="../tables">Tables</a>
+                <a href="../carousel">Carousel</a>
+                <a href="../buttons">Buttons</a>
+                <a href="../animations">Animations</a>
+                <a href="../card">Card View</a>
+                <a href="../chart" class="active-page">Charts</a>
+                <a href="../sample">Sample Page</a>
+            </div>
+            <!-- End of left navigation bar -->
+
+            <!-- Right block of content -->
+            <div class="right-content" id="main">
+                <!-- Top navigation bar -->
+                <div class="top-nav">
+                    <div class="inner-top-nav">
+                        <!-- Clickable buttons (a) -->
+                        <div class="buttons m-5 flex justify-between">
+                            <!-- Left side buttons -->
+                            <div class="buttons-left-side space-x-5 text-xl">
+                                <span onclick="toggleSidebar()">
+                                    <i class="fa fa-bars" style="font-size: 25px;"></i>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-globe"></i>
+                                    <a href="#">WD-T4</a>
+                                </span>
+                                <a href="index.html">Home</a>
+                                <a href="#">About</a>
+                                <a href="#">Contact Us</a>
+                            </div>
+                            <!-- End of left side buttons -->
+
+                            <!-- Right side buttons -->
+                            <div class="buttons-right-side space-x-8">
+                                <a href="#">
+                                    <i class="fa fa-user-circle-o" style="font-size: 25px;"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-bell" style="font-size: 25px;"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-envelope" style="font-size: 25px;"></i>
+                                </a>
+                            </div>
+                            <!-- End of right side buttons -->
+                        </div>
+                        <!-- End of clickable buttons -->
+                    </div>
+                </div>
+                <!-- End of top navigation bar -->
+
+                <!-- Main content -->
+                <div class="content">
+                    <div class="inner-content flex m-5 p-5 overflow-auto w-50">
+                        <section class="home-section">
+        
+
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+                            <div class="p-2 m-10 w-full">
+                                <div class="p-2 text-center text-2xl">
+                                    <h2><strong>Line Graphs</strong></h2>
+                                </div>
+                                <canvas id="myChart3" style="width: 100%; max-width: 900px"></canvas>
+                            </div>
+                            <div class="p-2 m-10">
+                                <div class="p-2 text-center text-2xl">
+                                    <h2><strong>Multiple Lines</strong></h2>
+                                </div>
+                                <canvas id="myChart1" style="width:100%;max-width:900px"></canvas>
+                            </div>
+                          
+                            <div class="p-2 m-10">
+                                <div class="p-2 text-center text-2xl">
+                                    <h2><strong>Pie Charts</strong></h2>
+                                </div>
+                                <canvas id="myChart2" style="width: 100%; max-width: 900px"></canvas>
+                            </div>
+                            <div class="p-2 m-10">
+                                <div class="p-2 text-center text-2xl">
+                                    <h2><strong>Bar Graph</strong></h2>
+                                </div>
+                                <canvas id="myChart" style="width: 100%; max-width: 900px"></canvas>
+                            </div>
+                    
+                            
+                    
+                          
+                    
+                            <script>
+                                var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+                                var yValues = [55, 49, 44, 24, 15];
+                                var barColors = ["red", "green", "blue", "orange", "brown"];
+                    
+                                new Chart("myChart", {
+                                    type: "bar",
+                                    data: {
+                                        labels: xValues,
+                                        datasets: [{
+                                            backgroundColor: barColors,
+                                            data: yValues,
+                                        }, ],
+                                    },
+                                    options: {
+                                        legend: {
+                                            display: false
+                                        },
+                                        title: {
+                                            display: true,
+                                            text: "World Wine Production 2018",
+                                        },
+                                    },
+                                });
+                    
+                                var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+                                var yValues = [55, 49, 44, 24, 15];
+                                var barColors = ["#b91d47", "#00aba9", "#2b5797", "#e8c3b9", "#1e7145"];
+                    
+                                new Chart("myChart2", {
+                                    type: "pie",
+                                    data: {
+                                        labels: xValues,
+                                        datasets: [{
+                                            backgroundColor: barColors,
+                                            data: yValues,
+                                        }, ],
+                                    },
+                                    options: {
+                                        title: {
+                                            display: true,
+                                            text: "World Wide Wine Production 2018",
+                                        },
+                                    },
+                                });
+                    
+                                var xValues = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+                                var yValues = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+                    
+                                new Chart("myChart3", {
+                                    type: "line",
+                                    data: {
+                                        labels: xValues,
+                                        datasets: [{
+                                            fill: false,
+                                            lineTension: 0,
+                                            backgroundColor: "rgba(0,0,255,1.0)",
+                                            borderColor: "rgba(0,0,255,0.1)",
+                                            data: yValues,
+                                        }, ],
+                                    },
+                                    options: {
+                                        legend: {
+                                            display: false
+                                        },
+                                        scales: {
+                                            yAxes: [{
+                                                ticks: {
+                                                    min: 6,
+                                                    max: 16
+                                                }
+                                            }],
+                                        },
+                                    },
+                                });
+                    
+                                var xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+                    
+                                new Chart("myChart1", {
+                                    type: "line",
+                                    data: {
+                                        labels: xValues,
+                                        datasets: [{
+                                            data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
+                                            borderColor: "red",
+                                            fill: false
+                                        }, {
+                                            data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
+                                            borderColor: "green",
+                                            fill: false
+                                        }, {
+                                            data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
+                                            borderColor: "blue",
+                                            fill: false
+                                        }]
+                                    },
+                                    options: {
+                                        legend: {
+                                            display: false
+                                        }
+                                    }
+                                });
+                            </script>
+                        </section>
+                    </div>
+                </div>
+                <!-- End of main content -->
+
+                <!-- Footer -->
+                <div class="footer">
+                    <div class="footer-inner p-4 m-2 bg-gray-300">
+                        <div class="footer-content p-2 m-2">
+                            <span><strong>Web Design Team 4 &copy; 2022-2022</strong></span>
+
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <span class="action-buttons">
+                                <a href="#">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+
+                                &nbsp; &nbsp;
+
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+
+                                &nbsp; &nbsp;
+
+                                <a href="#">
+                                    <i class="fa-solid fa-square-rss"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of footer -->
+            </div>
+        </div>
+        <!-- End of viewport -->
+    </div>
+    
+    <!-- load Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../resources/js/common.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/sample.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Admin Template thing</title>
+</head>
+<body>
+    <!-- Not really viewport, but it's the entire page -->
+    <div class="viewport">
+        <div id="failure-to-load-due-to-too-small-width" class="hidden">
+            <div class="failure-to-load-due-to-too-small-width__text">
+                <h1 class="m-5">
+                    Sorry, this page is not available on mobile devices. (Width too small.)
+                </h1>
+                <p class="m-5">
+                    Please use a computer or a larger screen to view this page, or you could try to rotate the device.
+                </p>
+            </div>
+        </div>
+        <div class="viewport-inner-wrap">
+            <!-- Left navigation bar -->
+            <div class="left-nav" id="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="../forms">Forms</a>
+                <a href="../tables">Tables</a>
+                <a href="../carousel">Carousel</a>
+                <a href="../buttons">Buttons</a>
+                <a href="../animations">Animations</a>
+                <a href="../card">Card View</a>
+                <a href="../chart">Charts</a>
+                <a href="../sample" class="active-page">Sample Page</a>
+            </div>
+            <!-- End of left navigation bar -->
+
+            <!-- Right block of content -->
+            <div class="right-content" id="main">
+                <!-- Top navigation bar -->
+                <div class="top-nav">
+                    <div class="inner-top-nav">
+                        <!-- Clickable buttons (a) -->
+                        <div class="buttons m-5 flex justify-between">
+                            <!-- Left side buttons -->
+                            <div class="buttons-left-side space-x-5 text-xl">
+                                <span onclick="toggleSidebar()">
+                                    <i class="fa fa-bars" style="font-size: 25px;"></i>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-globe"></i>
+                                    <a href="#">WD-T4</a>
+                                </span>
+                                <a href="index.html">Home</a>
+                                <a href="#">About</a>
+                                <a href="#">Contact Us</a>
+                            </div>
+                            <!-- End of left side buttons -->
+
+                            <!-- Right side buttons -->
+                            <div class="buttons-right-side space-x-8">
+                                <a href="#">
+                                    <i class="fa fa-user-circle-o" style="font-size: 25px;"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-bell" style="font-size: 25px;"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-envelope" style="font-size: 25px;"></i>
+                                </a>
+                            </div>
+                            <!-- End of right side buttons -->
+                        </div>
+                        <!-- End of clickable buttons -->
+                    </div>
+                </div>
+                <!-- End of top navigation bar -->
+
+                <!-- Main content -->
+                <div class="content">
+                    <div class="inner-content flex m-5 p-5 overflow-auto w-50">
+                        <section class="profile section" >
+                            <div class="container">
+                                <div class="row">
+                                    <div class="profile-content padd-15" >
+                                        <div class="row" >
+                                            <div class="portfolio padd-15" >
+                                                <div class="row">
+                                                    <div class="infor shadow-dark" >
+                                                        <!--item -->
+                                                             <div class="profile-img padd-15">
+                                                                <img src="../resources/assets/images/profile.jpg" alt="">
+                                                            </div>
+                                                            <div class="profile-name ">
+                                                                <h2><b>Name</b> : Sarah Jonh </h2>
+                                                                <h3>Software Enginner</h3>
+                                                                <hr>
+                                                            </div>
+                                                            <div class="profile-contact padd-15">
+                                                                <h2>Contact information</h2>
+                                                                <h4><i class="fa fa-map-marker-alt"></i>Office</h4>
+                                                                <p>Cambodia</p>
+                                                                <h4><i class="fa fa-phone"></i>Phone</h4>
+                                                                <p>+855 10 343 023</p>
+                                                                <h4><i class="fa fa-envelope"></i>Email</h4>
+                                                                <p>Info@gmail.com</p>
+                                                                <h4><i class="fa fa-globe-europe"></i>Website</h4>
+                                                                <p>www.domain.com</p>
+                                                                <hr>
+                                                            </div>
+                                                            <div class="social-contact padd-15">
+                                                                <h2>Social Links</h2>
+                                                                <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                                                                <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+                                                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                                                <a href="#"><i class="fa-brands fa-line"></i></a>
+                                                                <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+                                                                <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+                                                      
+                                                            </div>
+                                                        <!--End item-->
+                                                    </div>
+                                                    <div class="infor shadow-dark" >
+                                                        <!--item -->
+                                                            
+                                                                <div class="skills padd-15">
+                                                                    <div class="row">
+                                                                        <h2>Skill</h2>
+                                                                        <div class="skill-item padd-15">
+                                                                            <h5>CSS</h5>
+                                                                           <div class="progress">
+                                                                              <div class="progress-in" style="width: 76%;"></div>
+                                                                              <div class="skill-percent">76%</div>
+                                                                           </div>
+                                                                        </div>
+                                                                        <div class="skill-item padd-15">
+                                                                          <h5>HTML</h5>
+                                                                          <div class="progress">
+                                                                              <div class="progress-in" style="width: 70%;"></div>
+                                                                              <div class="skill-percent">70%</div>
+                                                                          </div>
+                                                                      </div>
+                                                                      <div class="skill-item padd-15">
+                                                                          <h5>JS</h5>
+                                                                          <div class="progress">
+                                                                              <div class="progress-in" style="width: 66%;"></div>
+                                                                              <div class="skill-percent">66%</div>
+                                                                          </div>
+                                                                      </div>
+                                                                      <div class="skill-item padd-15">
+                                                                          <h5>PHP</h5>
+                                                                          <div class="progress">
+                                                                              <div class="progress-in" style="width: 80%;"></div>
+                                                                              <div class="skill-percent">80%</div>
+                                                                          </div>
+                                                                      </div>
+                                                                      <div class="skill-item padd-15">
+                                                                          <h5>Reacte</h5>
+                                                                          <div class="progress">
+                                                                              <div class="progress-in" style="width: 76%;"></div>
+                                                                              <div class="skill-percent">76%</div>
+                                                                          </div>
+                                                                      </div>
+                                                                      <div class="skill-item padd-15">
+                                                                          <h5>Bootstrap</h5>
+                                                                         <div class="progress">
+                                                                          <div class="progress-in" style="width: 60%;"></div>
+                                                                          <div class="skill-percent">60%</div>
+                                                                         </div>
+                                                                      </div>
+                                                                      <div class="skill-item padd-15">
+                                                                          <h5>Figma</h5>
+                                                                         <div class="progress">
+                                                                          <div class="progress-in" style="width: 88%;"></div>
+                                                                          <div class="skill-percent">88%</div>
+                                                                         </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                          
+                                    
+                                                        <!--End item-->
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+                                            <div class="aside padd-15">
+                                                <div class="row">
+                                                    <div class="infor shadow-dark " >
+                                                        <div class="tab-header" >
+                                                            <div class="tab">
+                                                                <button class="tablinks" onclick="openCity(event, 'activity')" id="defaultOpen">Activity</button>
+                                                                <button class="tablinks" onclick="openCity(event, 'timeline')">Timeline</button>
+                                                                <button class="tablinks" onclick="openCity(event, 'setting')">Setting</button>
+                                                              </div>
+                                                        </div>
+                                                        <div class="tab-content ">
+                                                            <div class="ativity tabcontent" id="activity">
+                                                                <div class="user">
+                                                                    <div class="row">
+                                                                        <div class="user-profile padd-15">
+                                                                            <img src="../resources/assets/images/5.png" alt="">
+                                                                        </div>
+                                                                        <div class="user-name padd-5">
+                                                                            <h5>jonaks ksif.jr</h5>
+                                                                            <p>Prey Veng 12:00pm June 2021</p>
+                                                                        </div>
+                                                                        <div class="user-titile padd-15">
+                                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non deleniti ipsam a pariatur unde voluptate, officia perspiciatis et ratione! Omnis porro magni nostrum similique. Voluptatum quisquam accusamus aliquam repellat!</p>
+                                                                        </div>
+                                                                     
+                                                                    </div>
+                                                                    <div class="reacte padd-15">
+                                                                        <a href="#"><i class="fa-solid fa-share padd-15"></i>Share</a>
+                                                                        <a href="#"><i class="fa-solid fa-thumbs-up padd-15"></i>Like</a>
+                                                                        <a href="#"><i class="fa-regular fa-comments padd-15"></i>Comments(5)</a>
+                                                                    </div>
+                                                                    <div class="comments padd-5">
+                                                                        <input type="text"  class="form-control" placeholder="Type a comment">
+                                                                    </div>
+                                                                    <div class="line"></div>
+                                                                </div>
+                                                                <div class="user">
+                                                                    <div class="row">
+                                                                        <div class="user-profile padd-15">
+                                                                            <img src="../resources/assets/images/5.png" alt="">
+                                                                        </div>
+                                                                        <div class="user-name padd-5">
+                                                                            <h5>jonaks ksif.jr</h5>
+                                                                            <p>Prey Veng 12:00pm June 2021</p>
+                                                                        </div>
+                                                                        <div class="user-titile padd-15">
+                                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non deleniti ipsam a pariatur unde voluptate, officia perspiciatis et ratione! Omnis porro magni nostrum similique. Voluptatum quisquam accusamus aliquam repellat!</p>
+                                                                        </div>
+                                                                     
+                                                                    </div>
+                                                                    <div class="reacte padd-15">
+                                                                        <a href="#"><i class="fa-solid fa-share padd-15"></i>Share</a>
+                                                                        <a href="#"><i class="fa-solid fa-thumbs-up padd-15"></i>Like</a>
+                                                                        <a href="#"><i class="fa-regular fa-comments padd-15"></i>Comments(5)</a>
+                                                                    </div>
+                                                                    <div class="comments padd-5">
+                                                                        <input type="text"  class="form-control" placeholder="Type a comment">
+                                                                    </div>
+                                                                    <div class="line"></div>
+                                                                </div>
+                                                                <div class="user">
+                                                                    <div class="row">
+                                                                        <div class="user-profile padd-15">
+                                                                            <img src="../resources/assets/images/5.png" alt="">
+                                                                        </div>
+                                                                        <div class="user-name padd-5">
+                                                                            <h5>jonaks ksif.jr</h5>
+                                                                            <p>Prey Veng 12:00pm June 2021</p>
+                                                                        </div>
+                                                                        <div class="user-titile padd-15">
+                                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non deleniti ipsam a pariatur unde voluptate, officia perspiciatis et ratione! Omnis porro magni nostrum similique. Voluptatum quisquam accusamus aliquam repellat!</p>
+                                                                        </div>
+                                                                     
+                                                                    </div>
+                                                                    <div class="reacte padd-15">
+                                                                        <a href="#"><i class="fa-solid fa-share padd-15"></i>Share</a>
+                                                                        <a href="#"><i class="fa-solid fa-thumbs-up padd-15"></i>Like</a>
+                                                                        <a href="#"><i class="fa-regular fa-comments padd-15"></i>Comments(5)</a>
+                                                                    </div>
+                                                                    <div class="comments padd-5">
+                                                                        <input type="text"  class="form-control" placeholder="Type a comment">
+                                                                    </div>
+                                                                    <div class="line"></div>
+                                                                </div>
+                                                                <div class="user">
+                                                                    <div class="row">
+                                                                        <div class="user-profile padd-15">
+                                                                            <img src="../resources/assets/images/5.png" alt="">
+                                                                        </div>
+                                                                        <div class="user-name padd-5">
+                                                                            <h5>jonaks ksif.jr</h5>
+                                                                            <p>Prey Veng 12:00pm June 2021</p>
+                                                                        </div>
+                                                                        <div class="user-titile padd-15">
+                                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non deleniti ipsam a pariatur unde voluptate, officia perspiciatis et ratione! Omnis porro magni nostrum similique. Voluptatum quisquam accusamus aliquam repellat!</p>
+                                                                        </div>
+                                                                     
+                                                                    </div>
+                                                                    <div class="reacte padd-15">
+                                                                        <a href="#"><i class="fa-solid fa-share padd-15"></i>Share</a>
+                                                                        <a href="#"><i class="fa-solid fa-thumbs-up padd-15"></i>Like</a>
+                                                                        <a href="#"><i class="fa-regular fa-comments padd-15"></i>Comments(5)</a>
+                                                                    </div>
+                                                                    <div class="comments padd-5">
+                                                                        <input type="text"  class="form-control" placeholder="Type a comment">
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <div class="timline tabcontent" id="timeline">
+                                                               
+                                                                    <div class="row">
+                                                                        <div class="timeline-box padd-15">
+                                                                            <div class="timeline ">
+                                                                                <!-- Timeline item -->
+                                                                                <div class="timeline-item">
+                                                                                    <div class="circle-dot">  </div>
+                                                                                        <h3 class="timeline-date">
+                                                                                            <i class="fa fa-calendar"></i> 2012 - 2015
+                                                                                        </h3>
+                                                                                        <h4 class="timeline-title">Bacholor of Camputer Science</h4>
+                                                                                        <p class="timeline-text">
+                                                                                            CamBodia Academy of Digital Technology Phnum Penh, Cambodia
+                                                                                        </p>
+                                                                                  
+                                                                                </div>
+                                                                                 <!-- Timeline item -->
+                                                                                 <div class="timeline-item">
+                                                                                    <div class="circle-dot"> </div>
+                                                                                        <h3 class="timeline-date">
+                                                                                            <i class="fa fa-calendar"></i> 2013 - 2015
+                                                                                        </h3>
+                                                                                        <h4 class="timeline-title">Becholor of Mobile Develoment</h4>
+                                                                                        <p class="timeline-text">
+                                                                                           Build Engaging native mobile for android, Use features like the device camera, authentication , User interface Designer for the both Web and App.
+                                                                                        </p>
+                                                                                   
+                                                                                </div>
+                                                                                 <!-- Timeline item -->
+                                                                                 <div class="timeline-item">
+                                                                                    <div class="circle-dot"> </div>
+                                                                                        <h3 class="timeline-date">
+                                                                                            <i class="fa fa-calendar"></i> 2013 - 2015
+                                                                                        </h3>
+                                                                                        <h4 class="timeline-title">Master in Camputer Science</h4>
+                                                                                        <p class="timeline-text">
+                                                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi pariatur necessitatibus possimus temporibus eaque iusto similique fugiat,
+                                                                                             magni enim, non quo ex nemo voluptas minima laudantium, ullam mollitia cumque nostrum.
+                                                                                        </p>
+                                                                                   
+                                                                                </div>
+                                                                                <div class="timeline-item">
+                                                                                    <div class="circle-dot"> </div>
+                                                                                        <h3 class="timeline-date">
+                                                                                            <i class="fa fa-calendar"></i> 2013 - 2015
+                                                                                        </h3>
+                                                                                        <h4 class="timeline-title">Becholor of Mobile Develoment</h4>
+                                                                                        <p class="timeline-text">
+                                                                                           Build Engaging native mobile for android, Use features like the device camera, authentication , User interface Designer for the both Web and App.
+                                                                                        </p>
+                                                                                   
+                                                                                </div>
+                                                                                <div class="timeline-item">
+                                                                                    <div class="circle-dot"> </div>
+                                                                                        <h3 class="timeline-date">
+                                                                                            <i class="fa fa-calendar"></i> 2013 - 2015
+                                                                                        </h3>
+                                                                                        <h4 class="timeline-title">Becholor of Mobile Develoment</h4>
+                                                                                        <p class="timeline-text">
+                                                                                           Build Engaging native mobile for android, Use features like the device camera, authentication , User interface Designer for the both Web and App.
+                                                                                        </p>
+                                                                                   
+                                                                                </div>
+                                                                                <div class="timeline-item">
+                                                                                    <div class="circle-dot"> </div>
+                                                                                        <h3 class="timeline-date">
+                                                                                            <i class="fa fa-calendar"></i> 2013 - 2015
+                                                                                        </h3>
+                                                                                        <h4 class="timeline-title">Becholor of Mobile Develoment</h4>
+                                                                                        <p class="timeline-text">
+                                                                                           Build Engaging native mobile for android, Use features like the device camera, authentication , User interface Designer for the both Web and App.
+                                                                                        </p>
+                                                                                   
+                                                                                </div>
+                                                                                <div class="timeline-item">
+                                                                                    <div class="circle-dot"> </div>
+                                                                                        <h3 class="timeline-date">
+                                                                                            <i class="fa fa-calendar"></i> 2013 - 2015
+                                                                                        </h3>
+                                                                                        <h4 class="timeline-title">Becholor of Mobile Develoment</h4>
+                                                                                        <p class="timeline-text">
+                                                                                           Build Engaging native mobile for android, Use features like the device camera, authentication , User interface Designer for the both Web and App.
+                                                                                        </p>
+                                                                                   
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                               
+                                                            </div>
+                                                            <div class="setting tabcontent" id="setting">
+                                                               <div>
+                                                                <div class="form-template-1-body bg-white rounded-xl">
+                                                                    <div class="inner-form-template-1-body pt-7 rounded-xl">
+                                                                        <table class="w-full table-fixed text-center leading-10">
+                                                                            <tr class="border-b-8 border-b-transparent">
+                                                                                <td>
+                                                                                    <label for="first-name1"><strong>First Name</strong></label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input class="rounded-2xl px-3 border-2 border-gray-200" type="text" name="first-name1" id="first-name1" placeholder="First Name">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="border-b-8 border-b-transparent">
+                                                                                <td>
+                                                                                    <label for="last-name1"><strong>Last Name</strong></label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input class="rounded-2xl px-3 border-2 border-gray-200" type="text" name="last-name1" id="last-name1" placeholder="Last Name">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="border-b-8 border-b-transparent">
+                                                                                <td>
+                                                                                    <label for="email1"><strong>Email</strong></label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input class="rounded-2xl px-3 border-2 border-gray-200" type="email" name="email1" id="email1" placeholder="Email">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="border-b-8 border-b-transparent">
+                                                                                <td>
+                                                                                    <label for="phone1"><strong>Phone</strong></label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input class="rounded-2xl px-3 border-2 border-gray-200" type="text" name="phone1" id="phone1" placeholder="Phone Number">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="border-b-8 border-b-transparent">
+                                                                                <td>
+                                                                                    <label for="major"><strong>Major</strong></label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input class="rounded-2xl px-3 border-2 border-gray-200" type="text" name="major" id="major" placeholder="Major">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <label for="experiences"><strong>Experiences</strong></label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <textarea name="experiences" id="experiences" rows="2" class="resize-none border-2 border-gray-200 rounded-2xl px-3" placeholder="Experiences"></textarea>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <label for="skills"><strong>Skills</strong></label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input class="rounded-2xl px-3 border-2 border-gray-200" type="text" name="skills" id="skills" placeholder="Skills">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td colspan="2">
+                                                                                    <p class="text-s pt-10 pb-2">By pressing the submit button, I confirm that I agree to the <a href="#" class="underline">Privacy Policy</a> and <a href="#" class="underline">Terms of Services</a>.</p>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td colspan="2">
+                                                                                    <button class="submit1 m-6 text-xl bg-red-400 rounded-xl p-4">Submit</button>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                               </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                     </section>
+                    </div>
+                </div>
+                <!-- End of main content -->
+
+                <!-- Footer -->
+                <div class="footer">
+                    <div class="footer-inner p-4 m-2 bg-gray-300">
+                        <div class="footer-content p-2 m-2">
+                            <span><strong>Web Design Team 4 &copy; 2022-2022</strong></span>
+
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <span class="action-buttons">
+                                <a href="#">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+
+                                &nbsp; &nbsp;
+
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+
+                                &nbsp; &nbsp;
+
+                                <a href="#">
+                                    <i class="fa-solid fa-square-rss"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of footer -->
+            </div>
+        </div>
+        <!-- End of viewport -->
+    </div>
+    
+    <!-- load Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../resources/js/common.js"></script>
+    <script src="../resources/js/forms.js"></script>
+    <script src="../resources/js/sample.js"></script>
+
+</body>
+</html>
