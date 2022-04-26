@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/carousel.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <title>Admin Template thing</title>
 </head>
 <body>
@@ -30,12 +32,13 @@
             <!-- Left navigation bar -->
             <div class="left-nav" id="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="../forms" class="active-page">Forms</a>
+                <a href="../forms">Forms</a>
                 <a href="../tables">Tables</a>
-                <a href="../carousel">Carousel</a>
+                <a href="../carousel" class="active-page">Carousel</a>
                 <a href="../buttons">Buttons</a>
-                <a href="../animations">Animations</a>
+                <a href="../animations/">Animations</a>
                 <a href="../card">Card View</a>
+                <a href="../chart">Charts</a>
                 <a href="../sample">Sample Page</a>
             </div>
             <!-- End of left navigation bar -->
@@ -84,7 +87,83 @@
                 <!-- Main content -->
                 <div class="content">
                     <div class="inner-content flex m-5 p-5 overflow-auto w-50">
-                        
+                        <ul class="wrapper-content">
+                            <li>
+                                <div class="carousel-wrapper">
+                                    <div class="carousel-header p-2 text-center">
+                                        <h1>Carousel with wrap around</h1>
+                                    </div>
+                                    <div class="carousel-body overflow-hidden">
+                                        <div class="carousel-1 w-full h-full" data-flickity='{ "wrapAround": true, "autoPlay": false }'>
+                                            <div class="carousel-cell">
+                                                <img src="../resources/assets/images/1.jpg" alt="" width="300" height="300">
+                                            </div>
+                                            <div class="carousel-cell">
+                                                <img src="../resources/assets/images/2.jpg" alt="" width="300" height="300">
+                                            </div>
+                                            <div class="carousel-cell">
+                                                <img src="../resources/assets/images/3.jpg" alt="" width="300" height="300">
+                                            </div>
+                                            <div class="carousel-cell">
+                                                <img src="../resources/assets/images/4.jpg" alt="" width="300" height="300">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="carousel-wrapper">
+                                    <div class="carousel-header p-2 text-center">
+                                        <h1>Carousel with free scroll</h1>
+                                    </div>
+                                    <div class="carousel-body overflow-hidden">
+                                        <div class="carousel-2 w-full h-full" data-flickity='{ "freeScroll": true }'>
+                                            <div class="carousel-cell">
+                                                <img src="../resources/assets/images/1.jpg" alt="" width="300" height="300">
+                                            </div>
+                                            <div class="carousel-cell">
+                                                <img src="../resources/assets/images/2.jpg" alt="" width="300" height="300">
+                                            </div>
+                                            <div class="carousel-cell">
+                                                <img src="../resources/assets/images/3.jpg" alt="" width="300" height="300">
+                                            </div>
+                                            <div class="carousel-cell">
+                                                <img src="../resources/assets/images/4.jpg" alt="" width="300" height="300">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="carousel-wrapper">
+                                    <div class="carousel-header p-2 text-center">
+                                        <h1>Carousel with autoplay and wrap around</h1>
+                                    </div>
+                                    <div class="carousel-body overflow-hidden">
+                                        <div class="carousel-3 w-full h-full" data-flickity='{ "autoPlay": true, "wrapAround": true }'>
+                                            <div class="carousel-cell">
+                                                <img src="../resources/assets/images/1.jpg" alt="" width="300" height="300">
+                                            </div>
+                                            <div class="carousel-cell">
+                                                <img src="../resources/assets/images/2.jpg" alt="" width="300" height="300">
+                                            </div>
+                                            <div class="carousel-cell">
+                                                <img src="../resources/assets/images/3.jpg" alt="" width="300" height="300">
+                                            </div>
+                                            <div class="carousel-cell">
+                                                <img src="../resources/assets/images/4.jpg" alt="" width="300" height="300">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="text-white">
+                                Why isn't it grid like? Don't ask me, I have no idea either.
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <!-- End of main content -->
@@ -124,8 +203,9 @@
     
     <!-- load Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="../resources/js/common.js"></script>
-    <script src="../resources/js/forms.js"></script>
+    <script src="../resources/js/carousel.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/card.css">
+    <link rel="stylesheet" href="../resources/css/card2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Admin Template thing</title>
+</head>
+<body>
+    <!-- Not really viewport, but it's the entire page -->
+    <div class="viewport">
+        <div id="failure-to-load-due-to-too-small-width" class="hidden">
+            <div class="failure-to-load-due-to-too-small-width__text">
+                <h1 class="m-5">
+                    Sorry, this page is not available on mobile devices. (Width too small.)
+                </h1>
+                <p class="m-5">
+                    Please use a computer or a larger screen to view this page, or you could try to rotate the device.
+                </p>
+            </div>
+        </div>
+        <div class="viewport-inner-wrap">
+            <!-- Left navigation bar -->
+            <div class="left-nav" id="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="../forms">Forms</a>
+                <a href="../tables">Tables</a>
+                <a href="../carousel">Carousel</a>
+                <a href="../buttons">Buttons</a>
+                <a href="../animations">Animations</a>
+                <a href="../card"class="active-page">Card View</a>
+                <a href="../chart">Charts</a>
+                <a href="../sample">Sample Page</a>
+            </div>
+            <!-- End of left navigation bar -->
+
+            <!-- Right block of content -->
+            <div class="right-content" id="main">
+                <!-- Top navigation bar -->
+                <div class="top-nav">
+                    <div class="inner-top-nav">
+                        <!-- Clickable buttons (a) -->
+                        <div class="buttons m-5 flex justify-between">
+                            <!-- Left side buttons -->
+                            <div class="buttons-left-side space-x-5 text-xl">
+                                <span onclick="toggleSidebar()">
+                                    <i class="fa fa-bars" style="font-size: 25px;"></i>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-globe"></i>
+                                    <a href="#">WD-T4</a>
+                                </span>
+                                <a href="index.html">Home</a>
+                                <a href="#">About</a>
+                                <a href="#">Contact Us</a>
+                            </div>
+                            <!-- End of left side buttons -->
+
+                            <!-- Right side buttons -->
+                            <div class="buttons-right-side space-x-8">
+                                <a href="#">
+                                    <i class="fa fa-user-circle-o" style="font-size: 25px;"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-bell" style="font-size: 25px;"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-envelope" style="font-size: 25px;"></i>
+                                </a>
+                            </div>
+                            <!-- End of right side buttons -->
+                        </div>
+                        <!-- End of clickable buttons -->
+                    </div>
+                </div>
+                <!-- End of top navigation bar -->
+
+                <!-- Main content -->
+                <div class="content">
+                    <div class="inner-content flex m-5 p-5 overflow-auto w-50">
+                        <ul class="wrapper-content">
+                            <li>
+                                <div class="card card-1 bg-emerald-100 rounded-xl">
+                                    <div class="card-1-header rounded-xl bg-inherit">
+                                        <h1><strong>Simple Quick Card</strong></h1>
+                                    </div>
+                                    <div class="card-1-body bg-gradient-to-t from-cyan-200  to-emerald-100 rounded-xl">
+                                        <div class="inner-card-1-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, ducimus aliquid? Deleniti reprehenderit sint nihil, ab natus molestias iste recusandae ut error iusto? Rerum voluptas libero unde natus debitis adipisci.</p>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam natus magni fugiat, ab accusantium esse dignissimos perferendis reiciendis quia doloremque libero, inventore atque voluptatum odit tempore officia quae. Quisquam, rerum?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="card card-2 bg-blue-200 rounded-xl">
+                                    <div class="card-2-header rounded-xl bg-inherit">
+                                        <h1><strong>Simple Portfolio Card</strong></h1>
+                                    </div>
+                                    <div class="card-2-body bg-gradient-to-b from-blue-200 via-green-100 to-green-200 rounded-xl">
+                                        <div class="inner-card-2-body">
+                                            <div class="profile-image justify-center flex flex-col p-2 m-2 pt-10">
+                                                <img class="rounded-full self-center" src="../resources/assets/images/who-tho.jpg" alt="Micheal Jackson or someone idk" width="100">
+                                                <div class="name">
+                                                    <h1 class="text-xl"><strong>Michael Jackson</strong></h1>
+                                                </div>
+                                                <div class="job">
+                                                    <h1 class="text-l"><strong>Professional Musician, Singer</strong></h1>
+                                                </div>
+                                            </div>
+                                            <div class="message px-10 py-7">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae reiciendis est iure voluptatem ut vitae veniam! Laboriosam vel ex, ducimus facere tempore tempora repellendus ea minus voluptatem veritatis, corporis esse!</p>
+                                            </div>
+                                            <div class="social-buttons space-x-8 pb-5">
+                                                <a href="#">
+                                                    <i class="fa-brands fa-facebook" style="font-size: 25px;"></i>
+                                                </a>
+                                                <a href="#">
+                                                    <i class="fa-brands fa-twitter" style="font-size: 25px;"></i>
+                                                </a>
+                                                <a href="#">
+                                                    <i class="fa-brands fa-instagram" style="font-size: 25px;"></i>
+                                                </a>
+                                                <a href="#">
+                                                    <i class="fa-brands fa-youtube" style="font-size: 25px;"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="bigBox">
+                                <div class="card card-3 rounded-xl">
+                                    <div class="card-1-container">
+
+                                        <div class="col col1">
+                                
+                                          <div class="image">
+                                              <div class="image_img">
+                                                  <img src="../resources/assets/images/5.png" alt="">
+                                                  <div class="buy_now">
+                                                      <h4>Visit Now</h4>
+                                                  </div>
+                                              </div>
+                                
+                                              <div class="image_overlay blurv2">
+                                                  <h3>Angkor wat</h3>
+                                                  <p>The rarest travel experiences. The toughest. The dearest. The ones that won’t be around forever. These are the real do-before-you-die journeys...
+                                                  <h3>Interest</h3>
+                                                
+                                              </div>
+                                             
+                                          </div>
+                                
+                                
+                                        </div>  
+                                
+                                
+                                
+                                        <div class="col col1">
+                                
+                                          <div class="image">
+                                              <div class="image_img">
+                                                  <img src="../resources/assets/images/5.png" alt="">
+                                
+                                                  <div class="buy_now">
+                                                      <h4>Visit Now</h4>
+                                                  </div>
+                                              </div>
+                                
+                                              <div class="image_overlay blurv2">
+                                                  <h3>Grand Canyon</h3>
+                                                  <p>The rarest travel experiences. The toughest. The dearest. The ones that won’t be around forever. These are the real do-before-you-die journeys...
+                                                  <h3>Interest</h3>
+                                                  
+                                              </div>
+                                             
+                                          </div>
+                                
+                                
+                                        </div> 
+                                
+                                
+                                
+                                
+                                        <div class="col col1">
+                                
+                                          <div class="image">
+                                              <div class="image_img">
+                                                  <img src="../resources/assets/images/hero.jpg" alt="">
+                                
+                                                  <div class="buy_now">
+                                                      <h4>Visit Now</h4>
+                                                  </div>
+                                              </div>
+                                
+                                              <div class="image_overlay blurv2">
+                                                  <h3>Sistine Chapel in Vatican City, Italy</h3>
+                                                  <p>The rarest travel experiences. The toughest. The dearest. The ones that won’t be around forever. These are the real do-before-you-die journeys...
+                                                  <h3>Interest</h3>
+                                              </div>
+                                             
+                                          </div>
+                                
+                                        </div> 
+                                
+                                        <div class="col col1">
+                                
+                                          <div class="image">
+                                              <div class="image_img">
+                                                  <img src="../resources/assets/images/hero.jpg" alt="">
+                                                  <div class="buy_now">
+                                                      <h4>Visit Now</h4>
+                                                  </div>
+                                              </div>
+                                              <div class="image_overlay blurv2">
+                                                <h3>Everest Base Camp, Nepal</h3>
+                                                <p>The rarest travel experiences. The toughest. The dearest. The ones that won’t be around forever. These are the real do-before-you-die journeys...
+                                                <h3>Interest</h3>
+                                              </div>
+                                          </div>
+                                        </div> 
+                                      <!-- Overlay Animation  -->
+                                
+                                         </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End of main content -->
+
+                <!-- Footer -->
+                <div class="footer">
+                    <div class="footer-inner p-4 m-2 bg-gray-300">
+                        <div class="footer-content p-2 m-2">
+                            <span><strong>Web Design Team 4 &copy; 2022-2022</strong></span>
+
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <span class="action-buttons">
+                                <a href="#">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+
+                                &nbsp; &nbsp;
+
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+
+                                &nbsp; &nbsp;
+
+                                <a href="#">
+                                    <i class="fa-solid fa-square-rss"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of footer -->
+            </div>
+        </div>
+        <!-- End of viewport -->
+    </div>
+    
+    <!-- load Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../resources/js/common.js"></script>
+    <script src="../resources/js/card.js"></script>
+
+</body>
+</html>

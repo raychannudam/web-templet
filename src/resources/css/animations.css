@@ -1,0 +1,163 @@
+.square {
+    width: 100px;
+    height: 100px;
+}
+
+.square-small {
+    width: 75px;
+    height: 75px;
+}
+
+.color-wheel {
+    background-color: red;
+    animation: color-spin 5s linear infinite;
+}
+
+.spin {
+    animation: spin 3s linear infinite;
+}
+
+.move {
+    animation: move 3s infinite;
+}
+
+.move-square {
+    animation: move-square 3s infinite;
+}
+
+.gradient-shift {
+    --direction: right; /* change direction here */
+
+    background: linear-gradient(to var(--direction), red, yellow, green);
+    background-size: 300% auto;
+    animation: gradient-shift 5s infinite;
+}
+
+.grow, .shrink {
+    transition: all .5s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
+}
+
+.shrink:hover {
+    transform: scale(0.9);
+}
+
+.color-wheel-spin {
+    background-color: red;
+    animation: color-spin 5s linear infinite, spin 3s linear infinite;
+}
+
+.color-wheel-move-square {
+    background-color: red;
+    animation: color-spin 5s linear infinite, move-square 3s infinite;
+}
+
+.color-wheel-move {
+    background-color: red;
+    animation: color-spin 5s linear infinite, move 3s infinite;
+}
+
+@keyframes color-spin {
+    0% {
+        background-color: red;
+    }
+
+    12.5% {
+        background-color: yellow;
+    }
+
+    25% {
+        background-color: green;
+    }
+
+    37.5% {
+        background-color: cyan;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    62.5% {
+        background-color: indigo;
+    }
+
+    75% {
+        background-color: purple;
+    }
+
+    87.5% {
+        background-color: magenta;
+    }
+
+    100% {
+        background-color: red;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes move-square {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    25% {
+        transform: translate(100px, 0px);
+    }
+
+    50% {
+        transform: translate(100px, 100px);
+    }
+
+    75% {
+        transform: translate(0px, 100px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    25% {
+        transform: translate(100px, 0px);
+    }
+
+    75% {
+        transform: translate(-100px, 0px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: left center;
+    }
+
+    50% {
+        background-position: right center;
+    }
+
+    100% {
+        background-position: left center;
+    }
+}

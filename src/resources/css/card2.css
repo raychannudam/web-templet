@@ -1,0 +1,123 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* SIDE BAR */
+
+:root{
+    /* ===== Colors ===== */
+    --body-color: #efe8edf5;
+    --sidebar-color: #FFF;
+    --primary-color: #de005c;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+/* Overlay Image */
+
+.card-1-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.card-1-container .col{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     background-color: white;
+    flex-basis: 22%;
+    min-width: 250px ;
+   margin: 15px auto;
+   border-radius: 20px;
+}
+.card-1-container .col img {
+    width: 220px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.card-1-container .col img  {
+    margin: 18px 0;
+}
+
+.card-1-container .col .des h4 {
+    margin: 9px 0;
+}
+
+.buy_now {
+    width: 100%;
+    height: 50px;
+    background-color: #5725b9;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color:white;
+    
+}
+
+.image {
+    position: relative;
+}
+
+.image_img {
+    display: block;
+    width: 100%;
+}
+.image_overlay {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    border-radius: 20px;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.25s;
+    z-index: 2;
+
+}
+.image_overlay > * {
+    transform: translateY(20px);
+    transition: 0.25s;
+}
+
+.image_overlay:hover > * {
+    transform: translateY(0);
+}
+
+.image_overlay:hover {
+    opacity: 1;
+}
+.blurv2{
+    backdrop-filter: blur(3px);
+    z-index: 0;
+}
+
+.blurv2 {
+    padding: 15px;
+}
+.blurv2 > * {
+    margin: 4px 0;
+}
+.blurv2 p {
+    font-size: 0.7rem;
+    z-index: 9999;
+}

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/buttons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Admin Template thing</title>
+</head>
+<body>
+    <!-- Not really viewport, but it's the entire page -->
+    <div class="viewport">
+        <div id="failure-to-load-due-to-too-small-width" class="hidden">
+            <div class="failure-to-load-due-to-too-small-width__text">
+                <h1 class="m-5">
+                    Sorry, this page is not available on mobile devices. (Width too small.)
+                </h1>
+                <p class="m-5">
+                    Please use a computer or a larger screen to view this page, or you could try to rotate the device.
+                </p>
+            </div>
+        </div>
+        <div class="viewport-inner-wrap">
+            <!-- Left navigation bar -->
+            <div class="left-nav" id="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="../forms">Forms</a>
+                <a href="../tables">Tables</a>
+                <a href="../carousel">Carousel</a>
+                <a href="../buttons" class="active-page">Buttons</a>
+                <a href="../animations/">Animations</a>
+                <a href="../card">Card View</a>
+                <a href="../chart">Charts</a>
+                <a href="../sample">Sample Page</a>
+            </div>
+            <!-- End of left navigation bar -->
+
+            <!-- Right block of content -->
+            <div class="right-content" id="main">
+                <!-- Top navigation bar -->
+                <div class="top-nav">
+                    <div class="inner-top-nav">
+                        <!-- Clickable buttons (a) -->
+                        <div class="buttons m-5 flex justify-between">
+                            <!-- Left side buttons -->
+                            <div class="buttons-left-side space-x-5 text-xl">
+                                <span onclick="toggleSidebar()">
+                                    <i class="fa fa-bars" style="font-size: 25px;"></i>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-globe"></i>
+                                    <a href="#">WD-T4</a>
+                                </span>
+                                <a href="index.html">Home</a>
+                                <a href="#">About</a>
+                                <a href="#">Contact Us</a>
+                            </div>
+                            <!-- End of left side buttons -->
+
+                            <!-- Right side buttons -->
+                            <div class="buttons-right-side space-x-8">
+                                <a href="#">
+                                    <i class="fa fa-user-circle-o" style="font-size: 25px;"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-bell" style="font-size: 25px;"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-envelope" style="font-size: 25px;"></i>
+                                </a>
+                            </div>
+                            <!-- End of right side buttons -->
+                        </div>
+                        <!-- End of clickable buttons -->
+                    </div>
+                </div>
+                <!-- End of top navigation bar -->
+
+                <!-- Main content -->
+                <div class="content">
+                    <div class="inner-content flex m-5 p-5 overflow-auto w-50">
+                        <ul class="wrapper-content">
+                            <li class="mb-10 w-full">
+                                <div class="card rounded-xl text-center border-2 border-cyan-200">
+                                    <div class="card-header w-full text-center p-2">
+                                        <h1><strong>Simple normal buttons</strong></h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="inner-card-body">
+                                            <table class="inner-card-body-grid-1 w-full">
+                                                <tr>
+                                                    <th>
+                                                        <h1>Normal</h1>
+                                                    </th>
+                                                    <th>
+                                                        <h1>Large</h1>
+                                                    </th>
+                                                    <th>
+                                                        <h1>Small</h1>
+                                                    </th>
+                                                    <th>
+                                                        <h1>Flat</h1>
+                                                    </th>
+                                                    <th>
+                                                        <h1>Disabled</h1>
+                                                    </th>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="default">Default</button></td>
+                                                    <td><button class="default large">Default</button></td>
+                                                    <td><button class="default small">Default</button></td>
+                                                    <td><button class="default flat">Default</button></td>
+                                                    <td><button class="default disabled" disabled>Default</button></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="primary">Primary</button></td>
+                                                    <td><button class="primary large">Primary</button></td>
+                                                    <td><button class="primary small">Primary</button></td>
+                                                    <td><button class="primary flat">Primary</button></td>
+                                                    <td><button class="primary disabled" disabled>Primary</button></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="secondary">Secondary</button></td>
+                                                    <td><button class="secondary large">Secondary</button></td>
+                                                    <td><button class="secondary small">Secondary</button></td>
+                                                    <td><button class="secondary flat">Secondary</button></td>
+                                                    <td><button class="secondary disabled" disabled>Secondary</button></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="success">Success</button></td>
+                                                    <td><button class="success large">Success</button></td>
+                                                    <td><button class="success small">Success</button></td>
+                                                    <td><button class="success flat">Success</button></td>
+                                                    <td><button class="success disabled" disabled>Success</button></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="danger">Danger</button></td>
+                                                    <td><button class="danger large">Danger</button></td>
+                                                    <td><button class="danger small">Danger</button></td>
+                                                    <td><button class="danger flat">Danger</button></td>
+                                                    <td><button class="danger disabled" disabled>Danger</button></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="warning">Warning</button></td>
+                                                    <td><button class="warning large">Warning</button></td>
+                                                    <td><button class="warning small">Warning</button></td>
+                                                    <td><button class="warning flat">Warning</button></td>
+                                                    <td><button class="warning disabled" disabled>Warning</button></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="info">Info</button></td>
+                                                    <td><button class="info large">Info</button></td>
+                                                    <td><button class="info small">Info</button></td>
+                                                    <td><button class="info flat">Info</button></td>
+                                                    <td><button class="info disabled" disabled>Info</button></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="light">Light</button></td>
+                                                    <td><button class="light large">Light</button></td>
+                                                    <td><button class="light small">Light</button></td>
+                                                    <td><button class="light flat">Light</button></td>
+                                                    <td><button class="light disabled" disabled>Light</button></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="dark">Dark</button></td>
+                                                    <td><button class="dark large">Dark</button></td>
+                                                    <td><button class="dark small">Dark</button></td>
+                                                    <td><button class="dark flat">Dark</button></td>
+                                                    <td><button class="dark disabled" disabled>Dark</button></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="mb-10">
+                                <!-- same as above, now doing outline buttons -->
+                                <div class="card rounded-xl text-center border-2 border-emerald-200">
+                                    <div class="card-header w-full text-center p-2">
+                                        <h1><strong>Simple outline buttons</strong></h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="inner-card-body">
+                                            <table class="inner-card-body-grid-2 w-full">
+                                                <tr>
+                                                    <th>
+                                                        <h1>Normal</h1>
+                                                    </th>
+                                                    <th>
+                                                        <h1>Large</h1>
+                                                    </th>
+                                                    <th>
+                                                        <h1>Small</h1>
+                                                    </th>
+                                                    <th>
+                                                        <h1>Flat</h1>
+                                                    </th>
+                                                    <th>
+                                                        <h1>Disabled</h1>
+                                                    </th>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="outline-default">Default</button></td>
+                                                    <td><button class="outline-default large">Default</button></td>
+                                                    <td><button class="outline-default small">Default</button></td>
+                                                    <td><button class="outline-default flat">Default</button></td>
+                                                    <td><button class="outline-default disabled" disabled>Default</button></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="outline-primary">Primary</button></td>
+                                                    <td><button class="outline-primary large">Primary</button></td>
+                                                    <td><button class="outline-primary small">Primary</button></td>
+                                                    <td><button class="outline-primary flat">Primary</button></td>
+                                                    <td><button class="outline-primary disabled" disabled>Primary</button></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="outline-secondary">Secondary</button></td>
+                                                    <td><button class="outline-secondary large">Secondary</button></td>
+                                                    <td><button class="outline-secondary small">Secondary</button></td>
+                                                    <td><button class="outline-secondary flat">Secondary</button></td>
+                                                    <td><button class="outline-secondary disabled" disabled>Secondary</button></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="outline-success">Success</button></td>
+                                                    <td><button class="outline-success large">Success</button></td>
+                                                    <td><button class="outline-success small">Success</button></td>
+                                                    <td><button class="outline-success flat">Success</button></td>
+                                                    <td><button class="outline-success disabled" disabled>Success</button></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="outline-danger">Danger</button></td>
+                                                    <td><button class="outline-danger large">Danger</button></td>
+                                                    <td><button class="outline-danger small">Danger</button></td>
+                                                    <td><button class="outline-danger flat">Danger</button></td>
+                                                    <td><button class="outline-danger disabled" disabled>Danger</button></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="outline-warning">Warning</button></td>
+                                                    <td><button class="outline-warning large">Warning</button></td>
+                                                    <td><button class="outline-warning small">Warning</button></td>
+                                                    <td><button class="outline-warning flat">Warning</button></td>
+                                                    <td><button class="outline-warning disabled" disabled>Warning</button></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="outline-info">Info</button></td>
+                                                    <td><button class="outline-info large">Info</button></td>
+                                                    <td><button class="outline-info small">Info</button></td>
+                                                    <td><button class="outline-info flat">Info</button></td>
+                                                    <td><button class="outline-info disabled" disabled>Info</button></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="outline-light">Light</button></td>
+                                                    <td><button class="outline-light large">Light</button></td>
+                                                    <td><button class="outline-light small">Light</button></td>
+                                                    <td><button class="outline-light flat">Light</button></td>
+                                                    <td><button class="outline-light disabled" disabled>Light</button></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><button class="outline-dark">Dark</button></td>
+                                                    <td><button class="outline-dark large">Dark</button></td>
+                                                    <td><button class="outline-dark small">Dark</button></td>
+                                                    <td><button class="outline-dark flat">Dark</button></td>
+                                                    <td><button class="outline-dark disabled" disabled>Dark</button></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="bigBox">
+                                <div class="card rounded-xl text-center border-2 border-orange-200">
+                                    <div class="card-header w-full text-center p-2">
+                                        <h1><strong>Special buttons</strong></h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="inner-card-body">
+                                            <table class="inner-card-body-grid-2 w-full">
+                                                <tr>
+                                                    <th>
+                                                        <h1>Text Gradient Button</h1>
+                                                    </th>
+                                                    <th>
+                                                        <h1>Animated Glow Button</h1>
+                                                    </th>
+                                                    <th>
+                                                        <h1>Ghost Button</h1>
+                                                    </th>
+                                                    <th>
+                                                        <h1>Peach Gradient Button</h1>
+                                                    </th>
+                                                    <th>
+                                                        <h1>Lime Shadow Button</h1>
+                                                    </th>
+                                                </tr>
+
+                                                <tr class="w-full">
+                                                    <td>
+                                                        <button class="gradient-general">
+                                                            <span class="span-text">Hover over me!</span>
+                                                        </button>
+                                                    </td>
+
+                                                    <td>
+                                                        <button class="button-2 button-gradient-primary w-full">Primary</button>
+                                                    </td>
+
+                                                    <td>
+                                                        <button class="button-2 button-ghost w-full">Ghost Button</button>
+                                                    </td>
+
+                                                    <td>
+                                                        <button class="peach-gradient w-full">
+                                                            Party Time 🥥
+                                                        </button>
+                                                    </td>
+                                                    <td>
+                                                        <button class="lime-gradient w-full">Sprite</button>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="w-full">
+                                                    <th class="w-full text-center" colspan="5">
+                                                        <h1 class="w-full">Some spicy buttons</h1>
+                                                    </th>
+                                                </tr>
+
+                                                <tr class="w-full">
+                                                    <td colspan="5" class="w-full">
+                                                        <div class="container">
+                                                            <a class="btn btn-1">Hover me</a>
+                                                            <a class="btn btn-2">Hover me</a>
+                                                            <a class="btn btn-3">Hover me</a> 
+                                                            <a class="btn btn-4">Hover me</a> 
+                                                            <a class="btn btn-5">Hover me</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End of main content -->
+
+                <!-- Footer -->
+                <div class="footer">
+                    <div class="footer-inner p-4 m-2 bg-gray-300">
+                        <div class="footer-content p-2 m-2">
+                            <span><strong>Web Design Team 4 &copy; 2022-2022</strong></span>
+
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <span class="action-buttons">
+                                <a href="#">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+
+                                &nbsp; &nbsp;
+
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+
+                                &nbsp; &nbsp;
+
+                                <a href="#">
+                                    <i class="fa-solid fa-square-rss"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of footer -->
+            </div>
+        </div>
+        <!-- End of viewport -->
+    </div>
+    
+    <!-- load Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../resources/js/common.js"></script>
+    <script src="../resources/js/buttons.js"></script>
+
+</body>
+</html>

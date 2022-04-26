@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/tables.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="templete.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Admin Template thing</title>
+</head>
+<body>
+    <!-- Not really viewport, but it's the entire page -->
+    <div class="viewport">
+        <div id="failure-to-load-due-to-too-small-width" class="hidden">
+            <div class="failure-to-load-due-to-too-small-width__text">
+                <h1 class="m-5">
+                    Sorry, this page is not available on mobile devices. (Width too small.)
+                </h1>
+                <p class="m-5">
+                    Please use a computer or a larger screen to view this page, or you could try to rotate the device.
+                </p>
+            </div>
+        </div>
+        <div class="viewport-inner-wrap">
+            <!-- Left navigation bar -->
+            <div class="left-nav" id="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="../forms">Forms</a>
+                <a href="../tables" class="active-page">Tables</a>
+                <a href="../carousel">Carousel</a>
+                <a href="../buttons">Buttons</a>
+                <a href="../animations">Animations</a>
+                <a href="../card">Card View</a>
+                <a href="../chart">Charts</a>
+                <a href="../sample">Sample Page</a>
+            </div>
+            <!-- End of left navigation bar -->
+
+            <!-- Right block of content -->
+            <div class="right-content" id="main">
+                <!-- Top navigation bar -->
+                <div class="top-nav">
+                    <div class="inner-top-nav">
+                        <!-- Clickable buttons (a) -->
+                        <div class="buttons m-5 flex justify-between">
+                            <!-- Left side buttons -->
+                            <div class="buttons-left-side space-x-5 text-xl">
+                                <span onclick="toggleSidebar()">
+                                    <i class="fa fa-bars" style="font-size: 25px;"></i>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-globe"></i>
+                                    <a href="#">WD-T4</a>
+                                </span>
+                                <a href="index.html">Home</a>
+                                <a href="#">About</a>
+                                <a href="#">Contact Us</a>
+                            </div>
+                            <!-- End of left side buttons -->
+
+                            <!-- Right side buttons -->
+                            <div class="buttons-right-side space-x-8">
+                                <a href="#">
+                                    <i class="fa fa-user-circle-o" style="font-size: 25px;"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-bell" style="font-size: 25px;"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-envelope" style="font-size: 25px;"></i>
+                                </a>
+                            </div>
+                            <!-- End of right side buttons -->
+                        </div>
+                        <!-- End of clickable buttons -->
+                    </div>
+                </div>
+                <!-- End of top navigation bar -->
+
+                <!-- Main content -->
+                    <div class="grid  md:grid-cols-1 xl:grid-cols-2  m-3.5 ">
+                        <div>
+                            <table class="table-auto border-collapse border border-slate-400 text-center shadow-lg shadow-green-800 sm:mb-6 md:mb-6">
+                                <tr class=" bg-green-300 border-collapse border border-slate-400">
+                                    <th class=" py-3 pr-7 pl-7 border-collapse border border-slate-400 ">ID</th>
+                                    <th class="py-3 pr-7 pl-7 border-collapse border border-slate-400">NAME</th>
+                                    <th class="py-3 pr-7 pl-7 border-collapse border border-slate-400 ">MAJOR</th>
+                                    <th class="py-3 pr-7 pl-7 border-collapse border border-slate-400">ADDRESS</th>
+                                    <th class=" py-3 pr-7 pl-7 border-collapse border border-slate-400 ">CONTACT</th>
+                                </tr>
+                                <tr class="border-collapse border border-slate-400">
+                                   <td class="border-collapse border border-slate-400  " >0123</td>
+                                   <td class="border-collapse border border-slate-400  ">Sreynit</td>
+                                   <td class="border-collapse border border-slate-400  " >Computer Science</td>
+                                   <td class="border-collapse border border-slate-400 ">Kandal</td>
+                                   <td class="border-collapse border border-slate-400  ">05732547</td>
+                                </tr>
+                                <tr class="border-collapse border border-slate-400">
+                                    <td class="border-collapse border border-slate-400  ">0223</td>
+                                    <td class="border-collapse border border-slate-400 ">Kim Hong</td>
+                                    <td class="border-collapse border border-slate-400 ">Computer Science</td>
+                                    <td class="border-collapse border border-slate-400 ">Phnom penh</td>
+                                    <td class="border-collapse border border-slate-400  ">0394583</td>
+                                 </tr>
+                                 <tr class="border-collapse border border-slate-400">
+                                    <td class="border-collapse border border-slate-400 ">0323</td>
+                                    <td class="border-collapse border border-slate-400 ">Thy Rak</td>
+                                    <td class="border-collapse border border-slate-400 ">Computer Science</td>
+                                    <td class="border-collapse border border-slate-400 ">Phnom penh</td>
+                                    <td class="border-collapse border border-slate-400 ">0394583</td>
+                                 </tr>
+                                 <tr class="border-collapse border border-slate-400">
+                                    <td class="border-collapse border border-slate-400 ">0423</td>
+                                    <td class="border-collapse border border-slate-400  ">Oudam</td>
+                                    <td class="border-collapse border border-slate-400 ">Computer Science</td>
+                                    <td class="border-collapse border border-slate-400  ">Phnom penh</td>
+                                    <td class="border-collapse border border-slate-400  ">0394583</td>
+                                 </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table-auto bg-green-50 shadow-lg shadow-green-800">
+                                <tr class="border-solid border-900 border-2 bg-green-300">
+                                    <th class=" py-3  pr-5 pl-5  border-solid border-green-400 border-2">ID</th>
+                                    <th class="py-3 pr-5 pl-5 border-solid border-green-400 border-2">NAME</th>
+                                    <th class="py-3 pr-5 pl-5 border-solid border-green-400 border-2">MAJOR</th>
+                                    <th class="py-3 pr-5 pl-5 border-solid border-green-400 border-2">ADDRESS</th>
+                                    <th class=" py-3 pr-5 pl-5 px-5 border-solid border-green-400 border-2">CONTACT</th>
+                                </tr>
+                                <tr class="border-solid border-green-400 border-2">
+                                   <td class="border-solid border-green-400 border-2 bg-red-100 pr-5">0123</td>
+                                   <td class="border-solid border-green-400 border-2 pr-5">Sreynit</td>
+                                   <td class="border-solid border-green-400 border-2 bg-red-100 pr-5">Computer Science</td>
+                                   <td class="border-solid border-green-400 border-2 pr-5">Kandal</td>
+                                   <td class="border-solid border-green-400 border-2 bg-red-100 pr-5">0032547</td>
+                                </tr>
+                                <tr class="border-solid border-green-400 border-2">
+                                    <td class="border-solid border-green-400 border-2 bg-red-100 pr-5">0223</td>
+                                    <td class="border-solid border-green-400 border-2 pr-5">Kim Hong</td>
+                                    <td class="border-solid border-green-400 border-2 bg-red-100 pr-5">Computer Science</td>
+                                    <td class="border-solid border-green-400 border-2 pr-5">Phnom penh</td>
+                                    <td class="border-solid border-green-400 border-2 bg-red-100 pr-5">0394583</td>
+                                 </tr>
+                                 <tr class="border-solid border-green-400 border-2">
+                                    <td class="border-solid border-green-400 border-2 bg-red-100 pr-5">0323</td>
+                                    <td class="border-solid border-green-400 border-2 pr-5">Thy Rak</td>
+                                    <td class="border-solid border-green-400 border-2 bg-red-100 pr-5">Computer Science</td>
+                                    <td class="border-solid border-green-400 border-2 pr-5">Phnom penh</td>
+                                    <td class="border-solid border-green-400 border-2 bg-red-100 pr-5">0394583</td>
+                                 </tr>
+                                 <tr class="border-solid border-green-400 border-2">
+                                    <td class="border-solid border-green-400 border-2 bg-red-100 pr-5">0423</td>
+                                    <td class="border-solid border-green-400 border-2">Oudam</td>
+                                    <td class="border-solid border-green-400 border-2 bg-red-100 pr-5">Computer Science</td>
+                                    <td class="border-solid border-green-400 border-2 pr-5">Phnom penh</td>
+                                    <td class="border-solid border-green-400 border-2 bg-red-100 pr-5">0394583</td>
+                                 </tr>
+                            </table>
+                        </div>
+                        <div class="mt-6">
+                            <table class="shadow-lg shadow-green-800">
+                                <tr class="bg-green-400 text-center">
+                                    <th class="py-3 px-4 pr-7 pl-7  rounded-tl-md">ID</th>
+                                    <th class="py-3 px-4 pr-7 pl-7 border-2">NAME</th>
+                                    <th class="py-3 px-4 pr-7 pl-7 border-2">MAJOR</th>
+                                    <th class="py-3 px-4  pr-7 pl-7 border-2">ADDRESS</th>
+                                    <th class="py-3 px-4  pr-7 pl-7 rounded-tr-md">CONTACT</th>
+                                </tr>
+                                <tr class="bg-purple-200 text-center">
+                                    <td>0123</td>
+                                    <td>Thy Rak</td>
+                                    <td>Computer Science</td>
+                                    <td>Phnom penh</td>
+                                    <td>029038786</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td>0223</td>
+                                    <td>Sreynit</td>
+                                    <td>Computer Science</td>
+                                    <td>Phnom penh</td>
+                                    <td>03948098</td>
+                                </tr>
+                                <tr class="bg-purple-200 text-center">
+                                    <td>0323</td>
+                                    <td>Oudam</td>
+                                    <td>Computer Science</td>
+                                    <td>Phnom penh</td>
+                                    <td>0394583</td>
+                                 </tr>
+                                 <tr class="text-center" >
+                                    <td>0423</td>
+                                    <td>Kim Hong</td>
+                                    <td>Computer Science</td>
+                                    <td>Phnom penh</td>
+                                    <td>0394583</td>
+                                 </tr>
+                            </table>
+                        </div>
+                        <div class="mt-6">
+                            <table class="shadow-lg shadow-green-800">
+                                <tr class="bg-green-400 text-center">
+                                    <th class="py-3 px-6 rounded-tl-md  ">ID</th>
+                                    <th class="py-3 px-6 ">NAME</th>
+                                    <th class="py-3 px-6 ">MAJOR</th>
+                                    <th class="py-3 px-6 ">ADDRESS</th>
+                                    <th class="py-3 px-6 rounded-tr-md ">CONTACT</th>
+                                </tr>
+                                <tr class="bg-purple-200 text-center">
+                                    <td>0123</td>
+                                    <td>Thy Rak</td>
+                                    <td>Computer Science</td>
+                                    <td>Phnom penh</td>
+                                    <td>029038786</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td>0223</td>
+                                    <td>Sreynit</td>
+                                    <td>Computer Science</td>
+                                    <td>Phnom penh</td>
+                                    <td>03948098</td>
+                                </tr>
+                                <tr class="bg-purple-200 text-center">
+                                    <td>0323</td>
+                                    <td>Oudam</td>
+                                    <td>Computer Science</td>
+                                    <td>Phnom penh</td>
+                                    <td>0394583</td>
+                                 </tr>
+                                 <tr class="text-center" >
+                                    <td>0423</td>
+                                    <td>Kim Hong</td>
+                                    <td>Computer Science</td>
+                                    <td>Phnom penh</td>
+                                    <td>0394583</td>
+                                 </tr>
+                            </table>
+                        </div>
+                        <div class="mt-6">
+                            <table class="shadow-lg shadow-green-800">
+                                <tr class="bg-green-400 text-center">
+                                    <th class="py-3 px-7  rounded-tl-md">ID</th>
+                                    <th class="py-3 px-7 ">NAME</th>
+                                    <th class="py-3 px-7 ">MAJOR</th>
+                                    <th class="py-3 px-7 ">ADDRESS</th>
+                                    <th class="py-3 px-7  rounded-tr-md">CONTACT</th>
+                                </tr>
+                                <tr class="bg-purple-200 text-center hover:bg-blue-400">
+                                    <td>0123</td>
+                                    <td>Thy Rak</td>
+                                    <td>Computer Science</td>
+                                    <td>Phnom penh</td>
+                                    <td>029038786</td>
+                                </tr>
+                                <tr class="text-center hover:bg-blue-400">
+                                    <td>0223</td>
+                                    <td>Sreynit</td>
+                                    <td>Computer Science</td>
+                                    <td>Phnom penh</td>
+                                    <td>0394809</td>
+                                </tr>
+                                <tr class="bg-purple-200 text-center hover:bg-blue-400">
+                                    <td>0323</td>
+                                    <td>Oudam</td>
+                                    <td>Computer Science</td>
+                                    <td>Phnom penh</td>
+                                    <td>0394583</td>
+                                 </tr>
+                                 <tr class="text-center hover:bg-blue-400" >
+                                    <td>0423</td>
+                                    <td>Kim Hong</td>
+                                    <td>Computer Science</td>
+                                    <td>Phnom penh</td>
+                                    <td>0394583</td>
+                                 </tr>
+                            </table>
+                        </div>
+                        <div class="mt-6">
+                            <table class="shadow-lg shadow-green-800">
+                                <tr class="bg-green-400 text-center">
+                                    <th class="py-3 px-6 border-3 rounded-tl-md">ID</th>
+                                    <th class="py-3 px-6 border-3 ">NAME</th>
+                                    <th class="py-3 px-6 border-3">MAJOR</th>
+                                    <th class="py-3 px-6 border-3">ADDRESS</th>
+                                    <th class="py-3 px-6 border-3 rounded-tr-md">CONTACT</th>
+                                </tr>
+                                <tr class="bg-purple-200 text-center hover:bg-blue-400 hover:scale-105 ">
+                                    <td class="rounded-l-lg">0123</td>
+                                    <td>Thy Rak</td>
+                                    <td>Computer Science</td>
+                                    <td>Phnom penh</td>
+                                    <td class="rounded-r-lg">029038786</td>
+                                </tr>
+                                <tr class="text-center hover:bg-blue-400 hover:scale-105">
+                                    <td class="rounded-l-lg">0223</td>
+                                    <td>Sreynit</td>
+                                    <td>Computer Science</td>
+                                    <td>Phnom penh</td>
+                                    <td class="rounded-r-lg">0394809</td>
+                                </tr>
+                                <tr class="bg-purple-200 text-center hover:bg-blue-400 hover:scale-105">
+                                    <td class="rounded-l-lg">0323</td>
+                                    <td>Oudam</td>
+                                    <td>Computer Science</td>
+                                    <td>Phnom penh</td>
+                                    <td class="rounded-r-lg">0394583</td>
+                                 </tr>
+                                 <tr class="text-center hover:bg-blue-400 hover:scale-105" >
+                                    <td class="rounded-l-lg">0423</td>
+                                    <td>Kim Hong</td>
+                                    <td>Computer Science</td>
+                                    <td>Phnom penh</td>
+                                    <td class="rounded-r-lg">0394583</td>
+                                 </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <table class=" mt-6 border-green-200 border-2 text-center shadow-lg shadow-green-800">
+                                <tr>
+                                    <th colspan="5" class="bg-green-300">ASSIGNMENT-NOTE</th>
+                                </tr>
+                                <tr class="border-green-200 border-2">
+                                    <th class="border-green-200 border-2 pr-3 pl-3 bg-green-200">No</th>
+                                    <th class="border-green-200 border-2 pr-7 pl-7 bg-green-200">SUBJECT</th>
+                                    <th class="border-green-200 border-2 pr-7 pl-7 bg-green-200">TASK</th>
+                                    <th class="border-green-200 border-2 pr-7 pl-7 bg-green-200">DEADLINE</th>
+                                    <th class="border-green-200 border-2 pr-5 pl-5 bg-green-200"> STATUS</th>
+                                </tr>
+                                <tr class="border-green-200 border-2">
+                                    <td class="border-green-200 border-2">1</td>
+                                    <td class="border-green-200 border-2">Web-Design</td>
+                                    <td class="border-green-200 border-2">Practice1</td>
+                                    <td class="border-green-200 border-2">12-feb-2022</td>
+                                    <td  class="border-green-200 border-2">Done</td>
+                                </tr>
+                                <tr class="border-green-200 border-2">
+                                    <td class="border-green-200 border-2">2</td>
+                                    <td class="border-green-200 border-2">OOP</td>
+                                    <td class="border-green-200 border-2">Assignment</td>
+                                    <td class="border-green-200 border-2">07-Mar-2022</td>
+                                    <td  class="border-green-200 border-2 text-red-500">MISSING</td>
+                                </tr>
+                                <tr class="border-green-200 border-2">
+                                    <td class="border-green-200 border-2">3</td>
+                                    <td class="border-green-200 border-2">Database</td>
+                                    <td class="border-green-200 border-2">Presentation</td>
+                                    <td class="border-green-200 border-2">30-April-2022</td>
+                                    <td  class="border-green-200 border- text-green-500">COMING</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <table  class=" mt-6 text-center shadow-lg shadow-green-800 border-collapse border border-slate-400 w-5/6 h-64">
+                                <tr class="grid grid-cols-3">
+                                    <tr>
+                                        <td class="border-collapse border border-slate-400 bg-green-100">Table 1</td>
+                                        <td class="border-collapse border border-slate-400 bg-orange-300"> Table 2
+                                            <table class="w-full h-48" >
+                                                <tr>
+                                                    <td class="border-collapse border border-slate-400 bg-purple-200">Table 3</td>
+                                                    <td class="border-collapse border border-slate-400 bg-red-200">Table 4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="border-collapse border border-slate-400 bg-blue-400">Table 5</td>
+                                                    <td class="border-collapse border border-slate-400 bg-blue-200">Table 6</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border-collapse border border-slate-400 bg-purple-400"> Table 7 </td>
+                                        <td class="border-collapse border border-slate-400 bg-purple-700" > Table8 </td>
+                                    </tr>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="mt-6">
+                            <table class="border-collapse border border-slate-400 w-5/6 bg-green-100 shadow-lg shadow-green-800">         
+                                <tr>
+                                    <th class="pl-10">
+                                        <table class="">
+                                        <tr class="text-green-500 text-5xl"><th>T</th></tr>
+                                        <tr class="text-green-500 text-5xl"><th>O</th></tr>
+                                        <tr class="text-green-500 text-5xl"><th>D</th></tr>
+                                        <tr class="text-green-500 text-5xl"><th>O</th></tr>
+                                        </table>
+                                    </th>
+                                    <th class="border-collapse border border-slate-400 p-5 ">
+                                        <div class="grid grid-cols-3 gap-4 ">
+                                            <div>
+                                                <table class="border-collapse border border-slate-400  w-full">
+                                                    <tr>
+                                                        <th class="border-green-500 border-2">Subject1</th>
+                                                    </tr>
+                                                    <tr class="text-left"><td>1.......</td></tr>
+                                                    <tr class="text-left"><td>2.......</td></tr>
+                                                    <tr class="text-left"><td>3.......</td></tr>
+                                                    <tr class="text-left"><td>4.......</td></tr>
+                                                    <tr class="text-left"><td>5.......</td></tr>
+                                                </table>
+                                            </div>
+                                            <div>
+                                                <table class="border-collapse border border-slate-400  w-full">
+                                                    <tr>
+                                                        <th class="border-purple-500 border-2">Subject2</th>
+                                                    </tr>
+                                                    <tr class="text-left"><td>1.......</td></tr>
+                                                    <tr class="text-left"><td>2.......</td></tr>
+                                                    <tr class="text-left"><td>3.......</td></tr>
+                                                    <tr class="text-left"><td>4.......</td></tr>
+                                                    <tr class="text-left"><td>5.......</td></tr>
+                                                </table>
+                                            </div>
+                                            <div>
+                                                <table class="border-collapse border border-slate-400  w-full">
+                                                    <tr>
+                                                        <th class="border-yellow-500 border-2">Subject3</th>
+                                                    </tr>
+                                                    <tr class="text-left"><td>1.......</td></tr>
+                                                    <tr class="text-left"><td>2.......</td></tr>
+                                                    <tr class="text-left"><td>3.......</td></tr>
+                                                    <tr class="text-left"><td>4.......</td></tr>
+                                                    <tr class="text-left"><td>5.......</td></tr>
+                                                </table>
+                                            </div>
+                                            <div>
+                                                <table class="border-collapse border-2 border-slate-400  w-full">
+                                                    <tr>
+                                                        <th class="border-red-500 border-2">Subject4</th>
+                                                    </tr>
+                                                    <tr class="text-left"><td>1.......</td></tr>
+                                                    <tr class="text-left"><td>2.......</td></tr>
+                                                    <tr class="text-left"><td>3.......</td></tr>
+                                                    <tr class="text-left"><td>4.......</td></tr>
+                                                    <tr class="text-left"><td>5.......</td></tr>
+                                                </table>
+                                            </div>
+                                            <div>
+                                                <table class="border-collapse border border-slate-400  w-full">
+                                                    <tr>
+                                                        <th class="border-orange-500 border-2">Subject5</th>
+                                                    </tr>
+                                                    <tr class="text-left"><td>1.......</td></tr>
+                                                    <tr class="text-left"><td>2.......</td></tr>
+                                                    <tr class="text-left"><td>3.......</td></tr>
+                                                    <tr class="text-left"><td>4.......</td></tr>
+                                                    <tr class="text-left"><td>5.......</td></tr>
+                                                </table>
+                                            </div>
+                                            <div>
+                                                <table class="border-collapse border border-slate-400  w-full">
+                                                    <tr>
+                                                        <th class="border-blue-500 border-2">Subject6</th>
+                                                    </tr>
+                                                    <tr class="text-left"><td>1.......</td></tr>
+                                                    <tr class="text-left"><td>2.......</td></tr>
+                                                    <tr class="text-left"><td>3.......</td></tr>
+                                                    <tr class="text-left"><td>4.......</td></tr>
+                                                    <tr class="text-left"><td>5.......</td></tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </table>
+                        </div>
+                    
+                    </div>
+                <!-- End of main content -->
+            </div>
+        </div>
+        <!-- End of viewport -->
+    </div>
+    
+    <!-- load Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../resources/js/common.js"></script>
+    <script src="../resources/js/tables.js"></script>
+
+</body>
+</html>
